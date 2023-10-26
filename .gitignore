@@ -1,0 +1,5 @@
+recordings
+
+# ignore pycache
+__pycache__
+.vscode
