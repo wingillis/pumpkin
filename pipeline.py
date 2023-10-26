@@ -1,3 +1,4 @@
+import os
 import time
 import openai
 import pickle
@@ -26,8 +27,8 @@ def sentence_chunk_generator(responses, saved_output, n_words=5):
         yield "".join(chunk)
 
 
-OPENAI_API_KEY = "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"
-ELEVEN_API_KEY = "bd54bd71123abb0c19c5f91c75b263ac"
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+ELEVEN_API_KEY = os.environ.get("ELEVEN_API_KEY")
 VOICE = "2Bfl1dr0hezsfWHjnDB6"
 
 # Initialize OpenAI API key
